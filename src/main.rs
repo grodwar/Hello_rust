@@ -1,9 +1,12 @@
+mod arrays;
+mod option_t;
 mod combination_lock;
 mod match_statement;
 mod loops;
 mod if_statement;
 mod types_and_variables;
 mod stack_and_heap;
+mod struct_enum_unions;
 
 fn main(){
 
@@ -14,6 +17,11 @@ fn main(){
     //loops::while_loop();
     //loops::for_loop();
     //match_statement::match_statement();
-    combination_lock::combination_lock();
+    //combination_lock::combination_lock();
+    //struct__enum_unions::structures();
+    //struct__enum_unions::enumerations();
+    //struct_enum_unions::unions();
+    //option_t::option_t();
+    arrays::arrays();
     println!("bye main");
 }
