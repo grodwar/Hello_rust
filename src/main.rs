@@ -1,3 +1,7 @@
+mod generics;
+mod pattern_matching;
+mod tuples;
+mod slices;
 mod arrays;
 mod option_t;
 mod combination_lock;
@@ -22,6 +26,10 @@ fn main(){
     //struct__enum_unions::enumerations();
     //struct_enum_unions::unions();
     //option_t::option_t();
-    arrays::arrays();
+    //arrays::arrays();
+    //slices::slices();
+    //tuples::tuples();
+    //pattern_matching::pattern_matching();
+    generics::generics();
     println!("bye main");
 }
