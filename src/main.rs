@@ -1,3 +1,8 @@
+#![allow(dead_code)]
+
+mod std_collections;
+mod basics; // looks for "mod.rs" in the basics folder
+/* //used for when those files where in the same directory
 mod generics;
 mod pattern_matching;
 mod tuples;
@@ -11,25 +16,37 @@ mod if_statement;
 mod types_and_variables;
 mod stack_and_heap;
 mod struct_enum_unions;
+ */
 
+fn do_all_basics(){
+    basics::types_and_variables::types_and_variables();
+    basics::stack_and_heap::stack_and_heap();
+    basics::if_statement::if_statement();
+    basics::loops::while_loop();
+    basics::loops::for_loop();
+    basics::match_statement::match_statement();
+    basics::combination_lock::combination_lock();
+    basics::struct_enum_unions::structures();
+    basics::struct_enum_unions::enumerations();
+    basics::struct_enum_unions::unions();
+    basics::option_t::option_t();
+    basics::arrays::arrays();
+    basics::slices::slices();
+    basics::tuples::tuples();
+    basics::pattern_matching::pattern_matching();
+    basics::generics::generics();
+}
+
+fn do_all_std_collections()
+{
+    //std_collections::vectors();
+    //std_collections::hashmaps();
+    //std_collections::hashmaps_v2();
+    std_collections::sets();
+}
 fn main(){
-
     println!("hello main");
-    //types_and_variables::types_and_variables();
-    //stack_and_heap::stack_and_heap();
-    //if_statement::if_statement();
-    //loops::while_loop();
-    //loops::for_loop();
-    //match_statement::match_statement();
-    //combination_lock::combination_lock();
-    //struct__enum_unions::structures();
-    //struct__enum_unions::enumerations();
-    //struct_enum_unions::unions();
-    //option_t::option_t();
-    //arrays::arrays();
-    //slices::slices();
-    //tuples::tuples();
-    //pattern_matching::pattern_matching();
-    generics::generics();
+    //do_all_basics();
+    do_all_std_collections();
     println!("bye main");
 }

@@ -17,6 +17,7 @@ pub fn combination_lock(){
     let mut entry = String::new();
 
     loop {
+        println!("input something:");
         match state {
             State::Locked => {
                 let mut input = String::new();
