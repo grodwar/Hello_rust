@@ -1,5 +1,6 @@
 #![allow(dead_code)]
 
+mod functions;
 mod chars_and_strings;
 mod std_collections;
 mod basics; // looks for "mod.rs" in the basics folder
@@ -47,15 +48,23 @@ fn do_all_std_collections()
 }
 fn do_all_chars_and_strings()
 {
-    //chars_and_strings::strings();
-    //chars_and_strings::formatting_strings();
+    chars_and_strings::strings();
+    chars_and_strings::formatting_strings();
     chars_and_strings::number_guessing_game();
+}
+
+fn do_all_functions(){
+    //functions::function_and_arguments();
+    //functions::methods();
+    //functions::closures();
+    functions::higher_order_functions();
 }
 
 fn main(){
     println!("hello main");
     //do_all_basics();
     //do_all_std_collections();
-    do_all_chars_and_strings();
+    //do_all_chars_and_strings();
+    do_all_functions();
     println!("bye main");
 }
