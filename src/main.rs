@@ -4,6 +4,7 @@ mod functions;
 mod chars_and_strings;
 mod std_collections;
 mod basics; // looks for "mod.rs" in the basics folder
+mod understand_borrow; // from https://doc.rust-lang.org/1.8.0/book
 /* //used for when those files where in the same directory
 mod generics;
 mod pattern_matching;
@@ -60,11 +61,17 @@ fn do_all_functions(){
     functions::higher_order_functions();
 }
 
+fn do_all_borrow(){
+    understand_borrow::heap_and_stack::fake_main();
+}
+
 fn main(){
     println!("hello main");
     //do_all_basics();
     //do_all_std_collections();
     //do_all_chars_and_strings();
-    do_all_functions();
+    //do_all_functions();
+    do_all_borrow();
+
     println!("bye main");
 }
