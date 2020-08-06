@@ -5,6 +5,7 @@ mod chars_and_strings;
 mod std_collections;
 mod basics; // looks for "mod.rs" in the basics folder
 mod understand_borrow; // from https://doc.rust-lang.org/1.8.0/book
+mod traits;
 /* //used for when those files where in the same directory
 mod generics;
 mod pattern_matching;
@@ -65,13 +66,28 @@ fn do_all_borrow(){
     understand_borrow::heap_and_stack::fake_main();
 }
 
+fn do_all_traits(){
+
+    //traits::basic::basic();
+    //traits::parameters::parameters();
+    //traits::into::into();
+    //traits::drop::drop();
+    //traits::operator_overloading::operator_overloading();
+    //traits::static_dispatch::static_dispatch();
+    //traits::dynamic_dispatch::dynamic_dispatch();
+    //traits::why_dynamic_dispatch::why();
+    traits::vectors_objects_different_types::my_main();
+
+}
+
 fn main(){
     println!("hello main");
     //do_all_basics();
     //do_all_std_collections();
     //do_all_chars_and_strings();
     //do_all_functions();
-    do_all_borrow();
+    //do_all_borrow();
+    do_all_traits();
 
     println!("bye main");
 }

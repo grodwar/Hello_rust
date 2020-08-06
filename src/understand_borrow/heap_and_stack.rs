@@ -1,27 +1,27 @@
 #![allow(dead_code)]
 
 //////// the STACK
-
+// NB underscored the variable names to get rid of the warnings
 fn foo(){
-    let y = 5;
-    let z = 100;
+    let _y = 5;
+    let _z = 100;
 }
 
 fn italic() {
-    let i = 6;
+    let _i = 6;
 }
 
 fn bold() {
-    let a = 5;
-    let b = 100;
-    let c = 1;
+    let _a = 5;
+    let _b = 100;
+    let _c = 1;
 
     italic();
 }
 
 pub fn fake_main()
 {
-    let x = 42;// that basic values ‘go on the stack’
+    let _x = 42;// that basic values ‘go on the stack’
         //Well, when a function gets called, some memory gets allocated for all of its local variables and
         // some other information. This is called a ‘stack frame’
     //When the function exits, its stack frame gets deallocated
@@ -69,8 +69,8 @@ and then nothing
 // than a single function’s execution. For this, we can use the heap.
 
 fn fake_main2() {
-    let x = Box::new(5);
-    let y = 42;
+    let _x = Box::new(5);
+    let _y = 42;
 // We allocate space for two variables on the stack. y is 42, as it always has been,
 // but what about x? Well, x is a Box<i32>, and boxes allocate memory on the heap.
 // The actual value of the box is a structure which has a pointer to ‘the heap’.
@@ -93,8 +93,8 @@ because the heap can be allocated and freed in any order, it can end up with ‘
 
 
 ////// ARGUMENTS AND BORROWING
-fn foo3(i: &i32) {
-    let z = 42;
+fn foo3(_i: &i32) {
+    let _z = 42;
 }
 
 fn fake_main3() {
@@ -123,21 +123,21 @@ fn foo4(x: &i32) {
     bar(x, z);
 }
 
-fn bar(a: &i32, b: &i32) {
-    let c = 5;
+fn bar(_a: &i32, _b: &i32) {
+    let _c = 5;
     let d = Box::new(5);
     let e = &d;
 
     baz(e);
 }
 
-fn baz(f: &i32) {
-    let g = 100;
+fn baz(_f: &i32) {
+    let _g = 100;
 }
 
 fn fake_main4() {
     let h = 3;
-    let i = Box::new(20);
+    let _i = Box::new(20);
     let j = &h;
 
     foo4(j);
