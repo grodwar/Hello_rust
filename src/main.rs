@@ -1,5 +1,6 @@
 #![allow(dead_code)]
 
+mod lifetime_and_memory;
 mod functions;
 mod chars_and_strings;
 mod std_collections;
@@ -68,15 +69,26 @@ fn do_all_borrow(){
 
 fn do_all_traits(){
 
-    //traits::basic::basic();
-    //traits::parameters::parameters();
-    //traits::into::into();
-    //traits::drop::drop();
-    //traits::operator_overloading::operator_overloading();
-    //traits::static_dispatch::static_dispatch();
-    //traits::dynamic_dispatch::dynamic_dispatch();
-    //traits::why_dynamic_dispatch::why();
+    traits::basic::basic();
+    traits::parameters::parameters();
+    traits::into::into();
+    traits::drop::trait_drop();
+    traits::operator_overloading::operator_overloading();
+    traits::static_dispatch::static_dispatch();
+    traits::dynamic_dispatch::dynamic_dispatch();
+    traits::why_dynamic_dispatch::why();
     traits::vectors_objects_different_types::my_main();
+
+}
+
+fn do_all_lifetime_and_memory(){
+    //lifetime_and_memory::ownership::lifetime_and_memory();
+    lifetime_and_memory::borrowing::borrowing();
+    lifetime_and_memory::lifetime::lifetime();
+    lifetime_and_memory::lifetime::lifetime_structure_impl();
+    lifetime_and_memory::reference_counted_variable::rcv();
+    lifetime_and_memory::arc::arc();
+    lifetime_and_memory::arc_mutex::arc_mutex();
 
 }
 
@@ -87,7 +99,9 @@ fn main(){
     //do_all_chars_and_strings();
     //do_all_functions();
     //do_all_borrow();
-    do_all_traits();
+    //do_all_traits();
+    do_all_lifetime_and_memory();
+
 
     println!("bye main");
 }
