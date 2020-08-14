@@ -19,6 +19,8 @@ dependencies = [
 name = "hello_rust"
 version = "0.1.0"
 dependencies = [
+ "phrases 0.1.0",
+ "phrases2 0.1.0",
  "rand 0.7.3 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -26,6 +28,14 @@ dependencies = [
 name = "libc"
 version = "0.2.74"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "phrases"
+version = "0.1.0"
+
+[[package]]
+name = "phrases2"
+version = "0.1.0"
 
 [[package]]
 name = "ppv-lite86"
