@@ -1,5 +1,6 @@
 #![allow(dead_code)]
-
+mod odds_and_ends;
+mod advanced_topics;
 mod lifetime_and_memory;
 mod functions;
 mod chars_and_strings;
@@ -82,7 +83,7 @@ fn do_all_traits(){
 }
 
 fn do_all_lifetime_and_memory(){
-    //lifetime_and_memory::ownership::lifetime_and_memory();
+    lifetime_and_memory::ownership::lifetime_and_memory();
     lifetime_and_memory::borrowing::borrowing();
     lifetime_and_memory::lifetime::lifetime();
     lifetime_and_memory::lifetime::lifetime_structure_impl();
@@ -92,6 +93,19 @@ fn do_all_lifetime_and_memory(){
 
 }
 
+fn do_all_adv_topics(){
+    advanced_topics::circular_refs::circular_refs();
+    advanced_topics::concurrency::concurrencyv1();
+    advanced_topics::concurrency::concurrencyv2();
+}
+
+fn do_all_odds_and_ends(){
+    odds_and_ends::consuming_crates();
+    odds_and_ends::creating_crate();
+    odds_and_ends::creating_crate2();
+}
+
+
 fn main(){
     println!("hello main");
     //do_all_basics();
@@ -100,8 +114,8 @@ fn main(){
     //do_all_functions();
     //do_all_borrow();
     //do_all_traits();
-    do_all_lifetime_and_memory();
-
-
+    //do_all_lifetime_and_memory();
+    //do_all_adv_topics();
+    do_all_odds_and_ends();
     println!("bye main");
 }
